@@ -1,0 +1,18 @@
+<h2>Hiking Supplies</h2>
+
+<ul>
+  {{#each supplies }}
+  <li>{{ this.supplyName }}</li>
+  {{/each}}
+</ul>
+
+<form action="/supplies" method="post">
+  <label for="item">Item:</label>
+  <input type="text" id="item" name="item">
+
+  <input type="submit">
+</form>
+
+{{#if emptyForm}}
+  <p>Please fill out the form before submitting</p>
+{{/if}}
